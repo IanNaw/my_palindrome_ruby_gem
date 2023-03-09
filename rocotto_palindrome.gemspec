@@ -5,7 +5,7 @@ require_relative "lib/rocotto_palindrome/version"
 Gem::Specification.new do |spec|
   spec.name          = "rocotto_palindrome"
   spec.version       = RocottoPalindrome::VERSION
-  spec.authors       = ["MrRocotto"]
+  spec.authors       = ["IanNaw"]
   spec.email         = ["ian@sztanski.com"]
 
   spec.summary       = "Palindrome detector"
