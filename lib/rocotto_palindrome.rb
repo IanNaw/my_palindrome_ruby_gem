@@ -2,7 +2,20 @@
 
 require_relative "rocotto_palindrome/version"
 
-module RocottoPalindrome
-  class Error < StandardError; end
-  # Your code goes here...
+class String 
+  # Returns true for a palindrome, false otherwise.
+  def palindrome?
+    processed_content == processed_content.reverse
+  end
+
+  def letters
+    self.split(/\W+/).join("")
+  end
+  
+  private
+  
+    # Returns content for palindrome testing.
+    def processed_content
+      self.to_s.letters.downcase
+    end
 end

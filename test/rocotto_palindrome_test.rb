@@ -3,11 +3,21 @@
 require "test_helper"
 
 class RocottoPalindromeTest < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::RocottoPalindrome::VERSION
+
+  def test_for_non_palindrome
+    assert !"apple".palindrome?
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_for_mixed_case_palindrome
+    assert "RaceCar".palindrome?
+  end
+
+  def test_pallindrome_with_punctuation
+    assert "Madam, I'm Adam.".palindrome?
+  end
+
+  def test_letters
+    assert_equal "Madam, I'm Adam.".letters, "MadamImAdam"
   end
 end
+
